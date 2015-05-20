@@ -85,7 +85,7 @@ window.whiteboard = new window.EventEmitter();
         ctx.closePath();
         ctx.stroke();
 
-        // If shouldBroadcast is truthy, we will emit a draw event to listeners
+        // If shouldBroadcast is true, we will emit a draw event to listeners
         // with the start, end and color data.
         if (shouldBroadcast) {
             whiteboard.emit('draw', start, end, strokeColor);
